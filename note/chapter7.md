@@ -77,19 +77,29 @@ Verilog语言提供了命名事件控制机制。用户可以在程序中声明e
 3. 语句中的延迟或事件控制是相对于块语句开始执行的时刻而言的。
 
 eg.交通灯控制案例
+
 1.由于主干道来往的车辆很多，在默认情况下主干道的绿灯亮；
+
 2.乡村公路间断性的有车经过，有车来时乡村公路的交通灯必须为绿灯，只需维持一段足够长的时间，以便通过。
+
 3.只要乡村公路不再有车辆，那么乡村公路上的绿灯立马变为黄灯，然后变为红灯；同时，主干道的绿灯亮。
+
 4.一个传感器用于监视乡村公路上是否有车等待，它向控制器输入信号X；如果X=1，则表示有车等待，否则X=0；
-RTL and testbench codeLink:[Transport HDL Code](https://github.com/chenpup/HDL/blob/master/RTL/Transport_LED/)
+
+RTL and testbench codeLink:
+
+[Transport HDL Code](https://github.com/chenpup/HDL/blob/master/RTL/Transport_LED/)
 
 变量说明：
+
 parameter RED = 2'd0, YELLOW = 2'd1, GREEN=2'd2;
+
 MAIN_SIG,CNTRY_SIG 为干道和乡村公路上信号灯输出
 
 Simulation waveform and monitor result:
 
 ![monitor](https://github.com/chenpup/HDL/blob/master/picture/transport_monitor.png)
+
 ![transport](https://github.com/chenpup/HDL/blob/master/picture/transport_waveform.png)
 
 
